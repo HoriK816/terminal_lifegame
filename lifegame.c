@@ -8,7 +8,7 @@
 #define WIDTH  100
 #define HEIGHT 50
 
-char CheckNeighborhodd(char* val[], int i, int j);
+char CheckNeighborhood(char* val[], int i, int j);
 void DrawBoard(char* val[]);
 void DrawBoarderLine(char* val[]);
 void Initialize(void);
@@ -66,7 +66,7 @@ int main(int argc, char** argv){
         //update 
         for(int j=1; j<HEIGHT-1; j++){
             for(int i=1; i<WIDTH-1; i++){
-                val[i][j] = CheckNeighborhodd(p_tmp_val,i,j);
+                val[i][j] = CheckNeighborhood(p_tmp_val,i,j);
             }
         }
 
@@ -78,7 +78,7 @@ int main(int argc, char** argv){
 }
 
 
-char CheckNeighborhodd(char* val[], int i, int j){
+char CheckNeighborhood(char* val[], int i, int j){
     int count = 0;
     bool isalive;
     
